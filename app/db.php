@@ -12,6 +12,10 @@ class DB {
 		return true;
 	}
 
+	public static function getLastInsertId() {
+		return self::$con->lastInsertId();
+	}
+
 	public static function query($q, $params = []) {
 		$query = self::$con->prepare($q);
 		self::$query = $query;
