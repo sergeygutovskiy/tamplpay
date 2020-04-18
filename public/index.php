@@ -33,11 +33,6 @@ if ($route == "/" && isGET())
 	require "public/views/index.php";
 }
 
-// else if ($route == "/socket.io/socket.io.js")
-// {
-// 	require "node-server/node_modules/socket.io-client/dist/socket.io.min.js";
-// }
-
 else if ($route == "/register" && isGET())
 {
 	require "app/controllers/userController.php";
@@ -160,6 +155,16 @@ else if ($route == "/search/user" && isPOST())
 {
 	require "app/controllers/searchController.php";
 	searchUserByKey();
+}
+
+else if ($route == "/deal/chat/message/add" && isPOST())
+{
+	require "app/controllers/dealChatController.php";
+
+	Auth::loginBySession();
+	Auth::onlyAuth();
+
+	store();
 }
 
 else 

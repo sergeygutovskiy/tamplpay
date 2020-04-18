@@ -29,6 +29,10 @@ io.on("connection", function(socket){
 		socket.broadcast.to(socket.room).emit("partner-connected");
 	});
 
+	socket.on("new-message", (message) => {
+		socket.broadcast.to(socket.room).emit("new-message-from-other-user", message);
+	});
+
 	socket.on("disconnect", () => {
 		usersInChat = usersInChat.filter(u => {
 			return u != socket.userId;
