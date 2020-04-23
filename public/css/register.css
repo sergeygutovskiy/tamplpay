@@ -1,0 +1,251 @@
+body{
+	text-align: center;
+  }
+
+main{
+	width: 100%;
+	height: 100%;
+	display:inline-flex;
+  }
+
+.div-computer{
+	width: 50%;
+	height: 100%;
+	margin-top: 80px;
+	text-align: center;
+	padding-top: 30px;
+	margin-left: 30px;
+  }
+
+.div-computer h2{
+	margin-top: 35px;
+	opacity: 0.9;
+	font-weight: 500;
+	color: #333;
+	font-size: 22px;
+  }
+
+.pay-img-div-computer{
+	display: inline-block;
+	text-align: center;
+  }
+
+.pay-img-div-computer img{
+	width:50px; 
+	background-size:cover;
+	margin:auto;
+	padding: 20px;
+	margin-right: 20px;
+	margin-top: 30px;
+  }
+
+ .div-computer h3{
+	font-size: 15px;
+	opacity: 0.8;
+	max-width: 550px;
+	margin:auto;
+	padding-top: 40px;
+	color: #757575;
+	font-weight: 400;
+	line-height: 1.5;
+  }
+
+@media (max-width: 1024px){
+	.div-computer{
+		display: none;
+  }
+	main{
+		box-shadow: 0 15px 30px 0 rgba(0,0,0,.1);
+		margin: auto; 
+		margin-top: 80px;
+		max-width: 400px;
+		height: 410px;
+  }
+}
+@media (min-width: 1025px){
+	.logo-mobile{
+		display: none;
+  }
+	.enter-p-text-mobile{
+		display: none;
+  }
+	.main-form-on-registrtion h3{
+		display: none;
+  }
+	.main-infa{
+	font-size: 13px !important;
+	text-align: left;
+  }
+}
+button{
+	width: 100%;
+	max-width: 320px;
+	
+}
+.main-form-on-registrtion{
+	width: 35%;
+	height: 350px;
+	box-shadow: 0 15px 30px 0 rgba(0,0,0,.1);
+	margin-top: 150px;
+	margin-left: 50px;
+	min-width: 320px;
+	max-width: 410px;
+  }
+
+.main-form-on-registrtion h2{
+	text-align: center;
+	font-weight: 400;
+	margin-top: -30px;
+  }
+
+.form{
+	height: 280px;
+	width: 320px;
+	margin: auto;
+	margin-top: 50px;
+ }
+
+.form input{
+	height: 24px;
+	width: 100%;
+	max-width: 320px;
+	font-size: 22px;
+	outline: none;
+	border:none;
+	border-bottom: 2px solid #1fb740;
+	margin-top: 25px;
+	font-weight: 300;
+ }
+
+.enter-p-text{
+	position: absolute;
+	
+	width: 100%;
+	padding-right: 20px;
+ }
+.enter-p-text p{
+	float: right;
+	font-size: 13px;
+	padding: 15px;
+	color: #999;
+	font-weight: 300;
+	line-height: 1.5;
+ }
+
+.enter-p-text a{
+	color: #3a88fd;
+	text-decoration: none;
+ }
+
+.enter-p-text a:hover{
+color:red;
+	transition: 0.3s;
+ }
+
+.main-infa{
+	font-weight: 400;
+	line-height: 1.5;
+	color: #999;
+	font-size: 13px;
+	text-align: left;
+ }
+
+.polit-conf{
+	text-align: left;
+ }
+
+.checkbox-input{
+	width: 20px;
+	position: absolute;
+	margin-top: -27px;
+	margin-left: -6px;
+ }
+
+.div-computer-logo {
+	width: 200px;
+	background-size: cover;
+  }
+@media (max-width: 1024px){
+	main{
+		width: auto;
+  }
+.main-form-on-registrtion{
+	
+	padding: 20px;
+	
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  }
+
+.logo-mobile{
+	margin-top: -100px;
+	position: absolute;
+	width: 150px;
+	border:none;
+	background-size: cover;
+	margin-left : -161px;
+  }
+
+.main-form-on-registrtion h3{
+	position: absolute;
+	top: -66px;
+	font-weight: 400;
+	opacity: 0.7;
+	font-size: 20px;
+  }
+
+.form input{
+	height: 24px;
+	width: 100%;
+	max-width: 320px;
+	font-size: 22px;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #1fb740;
+	margin-top: 25px;
+	font-weight: 300;
+  }
+
+.enter-p-text{
+	display: none;
+  }
+
+.enter-p-text p{
+	margin-right: 35%;
+	margin-left: 35%;
+  }
+
+.enter-p-text-mobile{
+	font-size: 18px;
+	font-weight: 400;
+    opacity: 0.7;
+    float: left;
+  }
+
+.enter-p-text-mobile a{
+	text-decoration: none;
+    color: #3a88fd;
+  }
+
+.enter-p-text-mobile a:hover{
+	color: red;
+  }
+
+button{
+	height: 40px;
+	font-size: 25px !important;
+	padding: 0px !important;
+
+  }
+}
+.message-div{
+	height: 33px;
+}
+.message{
+	color: red;
+ 
+}

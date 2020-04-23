@@ -9,10 +9,11 @@ require_once "vendor/autoload.php";
 
 session_start();
 
-DB::setup("localhost", "root", "root", "tamplpay2");
+// DB::setup("localhost", "root", "root", "tamplpay2");
+DB::setup("eu-cdbr-west-03.cleardb.net", "bd387d086d00f2", "c5252877", "heroku_0ff4b9baa3b4647");
+
 
 $route = explode("?", $_SERVER["REQUEST_URI"]);
-
 if (count($route) > 1)
 {
 	$query = $route[1];
@@ -25,6 +26,15 @@ $route = $route[0];
 
 function isGET() { return $_SERVER["REQUEST_METHOD"] == "GET"; }
 function isPOST() { return $_SERVER["REQUEST_METHOD"] == "POST"; }
+
+// $temp = explode("/", $route); 
+
+// if ($temp[1] == "public") 
+// {
+// 	array_shift($temp);
+// 	// array_shift($route);
+// 	require implode("/", $temp);
+// }
 
 if ($route == "/" && isGET())
 {
