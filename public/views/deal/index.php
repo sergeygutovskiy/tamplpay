@@ -5,7 +5,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Deal info</h1>
+	<?php require "public/layouts/_navigation.php"; ?>
+	
+	<h1>
+		Deal info
+		<a href="/deal/chat?deal=<?php echo $deal['id']?>">Chat</a> 
+	</h1>
 	<input type="hidden" id="deal-id" value="<?php echo $deal['id']; ?>">
 	<h2><?php echo $deal["title"]; ?></h2>
 	<p>

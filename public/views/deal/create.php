@@ -5,6 +5,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+	<?php require "public/layouts/_navigation.php"; ?>
+	
 	<h1> Create Deal </h1>
 	<form id="deal-create-form" action="/deal/create" method="POST"> <p></p>
 		<input type="text" name="title" placeholder="title"> <p></p>

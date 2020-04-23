@@ -9,6 +9,8 @@
 	</script>
 </head>
 <body>
+	<?php require "public/layouts/_navigation.php"; ?>
+	
 	<h1>Chat</h1>
 	<input type="hidden" id="deal-id" value="<?php echo $dealId; ?>">
 		

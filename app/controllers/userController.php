@@ -177,4 +177,36 @@ function index()
 	require_once "public/views/user/index.php";
 }
 
+function deals()
+{
+	$query = "SELECT * FROM deals WHERE seller_id = ? OR buyer_id = ?";
+	DB::query($query, [ Auth::user()["id"], Auth::user()["id"] ]);
+
+	$deals = DB::results();
+
+	for ($i = 0; $i < count($deals); $i++)
+	{
+		if ($deals[$i]["seller_id"] == Auth::user()["id"])
+		{
+			$query =  "SELECT name, surname FROM users WHERE id = ?";
+			DB::query($query, [ $deals[$i]["buyer_id"] ]);
+
+			$deals[$i]["seller"] = Auth::user();
+			$deals[$i]["buyer"]  = DB::results()[0];
+		}
+		else
+		{
+			$query =  "SELECT * FROM users WHERE id = ?";
+			DB::query($query, [ $deals[$i]["seller_id"] ]);
+
+			$deals[$i]["buyer"] = Auth::user();
+			$deals[$i]["seller"]  = DB::results()[0];
+		}
+	}
+
+	// var_dump($deals);
+
+	require_once "public/views/user/deals.php";
+}
+
 ?>

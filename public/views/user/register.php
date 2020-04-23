@@ -5,6 +5,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+	<?php require "public/layouts/_navigation.php"; ?>
+	
 	<h1> Register </h1>
 	<form id="register-form" action="/register" method="POST">
 		<input type="text" name="email" placeholder="email">

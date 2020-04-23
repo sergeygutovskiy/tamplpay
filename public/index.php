@@ -63,6 +63,16 @@ else if ($route == "/user" && isGET())
 	index();
 }
 
+else if ($route == "/user/deals" && isGET())
+{
+	require "app/controllers/userController.php";
+
+	Auth::loginBySession();
+	Auth::onlyAuth();
+
+	deals();
+}
+
 else if ($route == "/user/confirm" && isGET())
 {
 	require "app/controllers/userController.php";
