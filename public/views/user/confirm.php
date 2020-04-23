@@ -69,6 +69,8 @@
 					res = JSON.parse(res);
 					if (res.error != undefined)
 						$(".message").text(res.error);
+					else
+						window.location.replace("http://localhost/user");
 				}).fail(function() {
 					console.log('fail');
 				});
