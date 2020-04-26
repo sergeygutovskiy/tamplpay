@@ -117,7 +117,7 @@
 				<h2>Регистрация</h2>
 				<form id="register-form" action="/register" method="POST">
 
-					<input type="text" id="email" name="email" placeholder="Почта" autofocus="">
+					<input type="text" id="email" name="email" placeholder="Почта" autocomplete="off">
 					<div class="message-div">
 						<p class="message"></p>
 					</div>

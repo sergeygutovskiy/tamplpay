@@ -101,7 +101,7 @@
 				<form id="login-form" action="/login" method="POST">
 					<div class="message-div"><p class="message"></p></div>
 					<label class="cool-input-label">Почта</label>
-					<input type="text" name="email" id="email" autocomplete="false">
+					<input type="text" name="email" id="email" autocomplete="off">
 					<br>
 					<div class="password">
 						<label class="cool-input-label">Пароль</label>

@@ -115,13 +115,13 @@
 					<?php echo $user['email']; ?>
 				</p>
 				<input type="hidden" name="key" value="<?php echo $user['unique_key']; ?>">
-				<input type="text" name="surname" placeholder="Фамилия" autocomplete="false" autofocus="" >
-				<input type="text" name="name" placeholder="Имя" autocomplete="false">
+				<input type="text" name="surname" placeholder="Фамилия" autocomplete="off">
+				<input type="text" name="name" placeholder="Имя" autocomplete="off">
 				<div class="password">
-					<input type="password" id="password-input" placeholder="Введите пароль" name="password" autocomplete="false">
+					<input type="password" id="password-input" placeholder="Введите пароль" name="password" autocomplete="off">
 					<a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
 				</div>
-				<input type="text" name="password-confirm" placeholder="Пароль еще раз" autocomplete="false">
+				<input type="text" name="password-confirm" placeholder="Пароль еще раз" autocomplete="off">
 				<p class="message"></p>
 				<button type="submit">Зарегестрироваться</button>
 				
