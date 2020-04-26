@@ -75,6 +75,7 @@ button:hover{
 
 .password {
   position: relative;
+  margin-top: -15px;
 }
 .password-control {
   position: absolute;
@@ -88,4 +89,17 @@ button:hover{
 }
 .password-control.view {
   background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+}
+
+.cool-input-label {
+  position: relative;
+  top: 50px;
+  left: 40px;
+  transition: all .2s linear;
+}
+
+.cool-input-label-up {
+  top: 25px;
+  color: gray;
+  font-size: 90%;
 }

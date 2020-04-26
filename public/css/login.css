@@ -21,6 +21,7 @@ body{
 	float: right;
 	padding: 20px 27px;
 	font-size: 14px;
+	position: relative;
 
 }
 .form-enter img{
@@ -37,7 +38,7 @@ body{
     color: #000;
 }
 form{
-	margin-top:60px;
+	margin-top: 20px;
 
 }
 form input{

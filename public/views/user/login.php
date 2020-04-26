@@ -100,10 +100,12 @@
 				<h4>Войдите, чтобы продолжить</h4>
 				<form id="login-form" action="/login" method="POST">
 					<div class="message-div"><p class="message"></p></div>
-					<input type="text" name="email" placeholder="Почта" autofocus="" autocomplete="false">
+					<label class="cool-input-label">Почта</label>
+					<input type="text" name="email" id="email" autocomplete="false">
 					<br>
 					<div class="password">
-						<input type="password" id="password-input" name="password" placeholder="Введите пароль" 
+						<label class="cool-input-label">Пароль</label>
+						<input type="password" id="password-input" name="password" placeholder="" 
 						name="password">
 						<a href="#" class="password-control" 
 						onclick="return show_hide_password(this);"></a>
@@ -117,6 +119,27 @@
 		<div class="div-link-left"><a href=""><p>Помощь</p></a></div>
 		<div class="div-link"><p>© 2020, TamplPay</p></div>
 	</main>
+
+	<script>
+		$(document).ready(() => {
+
+			var email = $("#email");
+			var password = $("#password-input");
+
+			email.focus(() => { email.prev().addClass("cool-input-label-up"); });
+			email.focusout(() => {
+				if (email.val().length == 0)
+					email.prev().removeClass("cool-input-label-up");
+			});
+
+			password.focus(() => { password.prev().addClass("cool-input-label-up"); });
+			password.focusout(() => {
+				if (password.val().length == 0)
+					password.prev().removeClass("cool-input-label-up");
+			});
+
+		});
+	</script>
 
 	<script>
 		$(document).ready(() => {
