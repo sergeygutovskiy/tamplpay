@@ -189,6 +189,8 @@ else if ($route == "/deal/chat/message/add" && isPOST())
 
 else 
 {
+	Auth::loginBySession();
+
 	require "public/views/404.php";
 }
 ?>

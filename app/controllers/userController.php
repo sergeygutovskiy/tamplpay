@@ -65,7 +65,7 @@ function create()
 			// $mail->AddAddress("sergey.gutovsk@gmail.com");
 
 			if ($mail->send()) {
-				// echo json_encode(array("message" => "Почта успешно зарегистрирована. На нее отправлено письмо для подтверждения акаунта."));
+				echo json_encode(array("message" => "Почта успешно зарегистрирована. На нее отправлено письмо для подтверждения акаунта."));
 			} else {
 				echo json_encode(array("error" => "Почта успешно зарегистрирована. Проблема с отправкой письма."));
 			}
@@ -157,11 +157,13 @@ function confirmUserAccount()
 		echo json_encode(array("error" => "Пароли не совпадают"));
 	else 
 	{
-		$query = "UPDATE users SET name=?, surname=?, password=? WHERE unique_key=?";
+		$query = "UPDATE users SET name=?, surname=?, password=?, active=1 WHERE unique_key=?";
 		DB::query($query, [ $name, $surname, $password, $key ]);
 
 		$_SESSION["key"] = $key;
 		$_SESSION["password"] = $password;
+
+		echo json_encode(array());
 
 		// $message = 'Создание аккаунта успешео завершено. ';
 		// $message .= '<a href="/user"> Домой </a>';

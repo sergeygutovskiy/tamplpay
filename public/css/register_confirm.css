@@ -110,9 +110,9 @@ button{
 	font-size: 22px;
 	outline: none;
 	border:none;
-	border-bottom: 2px solid #1fb740;
+	border-bottom: 2px solid #21b34a;
 	margin-top: 25px;
-	font-weight: 300;
+	font-weight: 400;
  }
 
 .enter-p-text{
@@ -198,7 +198,7 @@ color:red;
 	font-size: 22px;
 	outline: none;
 	border:none;
-	border-bottom: 1px solid #1fb740;
+	border-bottom: 1px solid #21b34a;
 	margin-top: 25px;
 	font-weight: 300;
   }
@@ -237,4 +237,10 @@ button{
 .message{
 	color: red;
 
+}
+
+.password-control {
+   
+    right: 3px !important;
+    
 }

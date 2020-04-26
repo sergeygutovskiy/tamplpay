@@ -17,7 +17,7 @@ a:hover{
 button {
 	
 	font-size: 22px;
-	background: #1fb740;
+	background: #21b34a;
 	border:none;
 	border-radius: 3px;
 	color:white;
@@ -29,4 +29,63 @@ button:hover{
 	font-size: 22.2px;
 	transition: 0.5s;
 	background: #3a88fd;
+}
+
+
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет */
+  background: #2fa6ff;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+
+.password {
+  position: relative;
+}
+.password-control {
+  position: absolute;
+  top: 27px;
+  right: 29px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  padding: 5px !important;
+  background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+.password-control.view {
+  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
 }
